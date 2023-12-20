@@ -244,6 +244,24 @@
 
 .list-book-room {
   display: none;
+  .search {
+    margin: 12px 0;
+    input {
+      margin: 16px 12px 0 16px;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      width: 400px;
+      border-radius: 3px;
+    }
+    .btn-search {
+      width: 120px;
+      height: 42px;
+      background-color: #1f9448;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    }
+  }
 }
 
 .list-book-room.active {
@@ -270,6 +288,8 @@
   }
 }
 
+// Chỉnh sửa thông tin phòng
+
 .edit-room-container {
   display: none;
   position: fixed;
@@ -287,7 +307,7 @@
 
   .edit-room-modal {
     width: 50%;
-    height: 73%;
+    height: 68%;
     background-color: white;
     color: black;
     padding: 4px 20px;
@@ -309,7 +329,7 @@
 
     .title {
       text-align: center;
-      padding: 12px 0;
+      padding: 20px 0;
       font-size: 24px;
       font-weight: 600;
     }
@@ -394,6 +414,72 @@
       }
       .btn-submit {
         margin-top: 12px;
+        padding: 8px 20px;
+      }
+    }
+  }
+}
+
+// Chỉnh sửa đơn đặt phòng
+
+.edit-book-room-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  .edit-book-room-modal {
+    width: 50%;
+    height: 75%;
+    background-color: white;
+    color: black;
+    padding: 4px 20px;
+    border-radius: 4px;
+    position: relative;
+    animation: fadeIn ease 0.5s;
+    .icon-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px;
+      font-size: 24px;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+
+    .title {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .content {
+      input {
+        width: 100%;
+        padding: 6px 14px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid #ccc;
+        margin: 4px 0 8px 0;
+      }
+      label {
+        font-weight: 500;
+      }
+      .btn-submit {
+        margin-top: 14px;
         padding: 8px 20px;
       }
     }

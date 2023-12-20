@@ -9,8 +9,10 @@ const displayListBookRoom = $(".staff-content-container.list-book-room");
 const displayProfile = $(".staff-content-container.profile");
 const editRoomContainer = $(".edit-room-container");
 const addRoomContainer = $(".add-room-container");
+const editBookRoomContainer = $(".edit-book-room-container");
 const closeEditRoomContainer = $(".edit-room-container .icon-close");
 const closeAddRoomContainer = $(".add-room-container .icon-close");
+const closeEditBookRoomContainer = $(".edit-book-room-container .icon-close");
 
 profile.onclick = () => {
   displayProfile.classList.remove("active");
@@ -52,10 +54,19 @@ const handleEditRoom = () => {
 const handleAddRoom = () => {
   addRoomContainer.classList.add("active");
 };
+
+const handleEditBookRoom = () => {
+  editBookRoomContainer.classList.add("active");
+};
+
 closeEditRoomContainer.onclick = () => {
   editRoomContainer.classList.remove("active");
 };
 
 closeAddRoomContainer.onclick = () => {
   addRoomContainer.classList.remove("active");
+};
+
+closeEditBookRoomContainer.onclick = () => {
+  editBookRoomContainer.classList.remove("active");
 };
